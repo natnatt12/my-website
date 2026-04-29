@@ -242,6 +242,7 @@ p {
    HERO
 ═══════════════════════════════════════════ */
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -283,6 +284,28 @@ p {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gray-300);
+  transition: color var(--ease);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.scroll-indicator:hover { color: var(--gray-600); }
+
+.scroll-indicator svg {
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
 }
 
 /* ═══════════════════════════════════════════
@@ -480,6 +503,13 @@ p {
   object-fit: cover;
   border-radius: var(--radius);
   display: block;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  transition: outline-color 0.25s ease;
+}
+
+.campaign-hero video:hover {
+  outline-color: var(--gray-300);
 }
 
 .campaign-2x2 {
@@ -501,6 +531,13 @@ p {
   object-fit: cover;
   border-radius: var(--radius);
   display: block;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  transition: outline-color 0.25s ease;
+}
+
+.campaign-card:hover video {
+  outline-color: var(--gray-300);
 }
 
 .campaign-desc {
@@ -547,6 +584,13 @@ p {
   object-fit: cover;
   border-radius: var(--radius);
   display: block;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  transition: outline-color 0.25s ease;
+}
+
+.video-card:hover video {
+  outline-color: var(--gray-300);
 }
 
 .video-title {
