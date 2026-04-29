@@ -503,11 +503,12 @@ p {
   display: block;
 }
 
-.campaign-label {
-  font-size: 0.78rem;
-  font-weight: 500;
+.campaign-desc {
+  font-size: 0.82rem;
   color: var(--gray-400);
-  letter-spacing: 0.06em;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-bottom: 1.5rem;
 }
 
 .work-block-footer {
